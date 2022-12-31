@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Interview Question </title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <div class="container">
+        <h1>Day 1 Interview Questions</h1>
+    <h2> 1. What is Virtual DOM? </h2>
+    <p> 
+      <span> Ans.</span> Virtual DOM is basically a light weight copy of actual DOM.
+
+      DOM stands for document object model it is simply a structure representation of HTML elements. DOM  represents the entire UI of your application. DOM is represented as a tree data structure it contains a node for each UI element present in the web document.
+      
+      Manipulating Dom is very slow but manipulating virtual DOM is fast
+    </p>
+
+    <p>So basically when anything new is added to the application a virtual DOM is created and each element is the node of the tree.
+
+      So whenever there is a change in the state of any element a new updated virtual DOM tree is created and then this new updated virtual DOM tree is compared with the previous virtual DOM tree and if it find any change then it will find the best  possible way to change it in real DOM, now only the updated element will only get re-rendered on the page again.</p>
+
+      <p>The process of comparing the current virtual term with the previous one is known as diffing and when the entire processors completed of transforming changes in real term then it is called reconciliation</p>
+
+      <p>It saves a lot of time because as we know if we are updating the whole dom again and again then the CSS and layout applied everything would be calculated once again by the browser so it will take time so if only one node is updating then the time would  be less and in a very affective way.</p>
+    
+  
+    <h2> 2. What is SPA? </h2>
+    <p>
+       <span> Ans.</span> Single page application is a application or website that interact with the web browser by dynamically rewriting the current web page with new data from the web server instead of default method of browser loading entire new pages this means that URL of the website will not change completely when pages reloaded instead it will keep getting the content and rewriting the Dom with it instead of loading new page.
+    </p>
+    <p>Single page application work inside a browser and do not require page reloading during web page execution. It's examples are Gmail, Google Map, Facebook github</p>
+
+    <h2> 3. What is difference between class and functional component? </h2>
+    <p> 
+      <span> Ans.</span> A functional component is a  pure javascript function that accept props as an argument and return react element that is jsx 
+
+      Whereas a Class component requires you to extend from react.Component and create a render function which returns a react element.
+    </p>
+    <p>In functional component no render method is used where as in class component it is compulsory and must that we should have a render method and inside the render method we would have our jsx</p>
+
+    <p>Functional component when it is called it will run from top to bottom once and will return and then it can't we kept alive but where as in class component when it is called it will run and it would be kept alive according to the react life cycle method</p>
+
+    <p>Function component is also known as stateless component because as they simply accept data and display them in some form and they are mainly responsible for rendering UI. Whereas class components are known as state full components because they implement some logic and state</p>
+
+    <p>In functional component we can't use react life cycle method that is (component did Mount, component did update component will unmount). Whereas in class component this react life cycle method are used inside the component for managing the life cycle</p>
+    
+    <p>In functional component constructors are not used where as in class component constructor are used as it needs to store the states</p>
+  
+    <h2> 4. What does mean by state and its use in react? </h2>
+    <p>
+       <span> Ans.</span> State is a built-in react object that is basically used to contain data or information about the component. When the state object changes the component rerenders. States Allows us to manage changing data in an application.
+    </p>
+    <p>We can use states in both functional and class component in class component we use inside the constructor function we declared this.state and inside that we have some state but 
+
+      In functional component we have some hooks which have some state and we manipulate that state with setter function within the component</p>
+  
+    <h2> 5. What is JSX and why do we use it instead of js? </h2>
+    <p>
+       <span> Ans.</span> JSX stands for JavaScript XML. It allows us to directly write HTML in react within JavaScript code. It is faster than normal JavaScript as it performs Optimisation while translating to regular JavaScript. JSX makes it easier to write HTML in react and its faster than regular JavaScript as it can easily converter HTML tag to react element.
+    </p>
+
+    <h2> 6. What is package.json? </h2>
+    <p>
+       <span> Ans.</span> Package.json (Javascript Object Notation) file that includes key information concerning our project.This is required file that is needed to run any react project. This file includes mata data such as name, author and version as well as starter scripts and dependencies used in the project.
+    </p>
+
+    <p>We should never delete this file as it should be Run always when we are running our project. We can find this file inside our route directory and when ever we are installing some packages then we can see inside this package.json file and check whether it is installed or not</p>
+
+    <h2> 7. Difference b/w Stateful and stateless Component? </h2>
+    <p>
+       <span> Ans.</span> Stateless component are simple functional component without having a local state but  there is a hook in react to add state behaviour in functional component as well.
+
+       Where as stateful components can contain the state object and event handling function users action as well.
+       
+       Stateless components are pure in nature which does not have very specific task
+    </p>
+
+    <p>Statefull component are those component which have some state. The states get initialised in the constructor and it store information about the component's state changein memory. It may get changed depending up on the action of the component or child components.</p>
+    <p>Stateless component are those component which does not have any state at all it is a normal function with no render method and no life cycle methods</p>
+
+    <h2> 8. How do you pass data from parent to child? </h2>
+    <p>
+       <span> Ans.</span> Data can be passed from parent to child component via props. Any properties of parent component will it be a variable or a function we can pass it to the child component via props.
+    </p>
+
+    <p>We can pass variable or function has a prop inside the child component and in the child component we can call the variable or function with the use of props.</p>
+
+    <p>Props stands for Properties. Props are argument passed in react component. React props are like a function argument in JavaScript and attribute in HTML. We can send a prop to a component and we can receive a prob in an component</p>
+  
+    <h2> 9. What is the package name you are using for routing? </h2>
+    <p>
+       <span> Ans.</span> Routing is a process in which a user is directed to different pages based on the action or request. React router is a standard library system build on top of react and use to create Routing in the react application using react router dom package. React router plays an important role to display multiple views in single page application.
+    </p>
+    <p>For that firstly we have to install  it using  npm install react router dom. Then we can wrap our app.js file inside browser router it basically used to handle the dynamic URL.</p>
+
+    <p>We have a route which is basically having two attributes path and component in path we can give a specific path and in component we can call that component. If we have more than one route we can wrap it Inside router.</p>
+
+    <h2> 10. What is the Difference between react and react native? Which one is library or framework? </h2>
+    <p>
+       <span> Ans.</span> React is a JavaScript library for reusable component designed to create skeletons of app
+        Where as react native is designed to build native mobile apps for reusable component
+    </p>
+    <p>React is open source JavaScript library for building UI for web application 
+      Where as  React native is a JavaScript Framework for rendering mobile application for IOS and Android. It is based on react Facebook JavaScript library for building user interface but instead of targetting the browser it target mobile platform</p>
+
+    <h2> 11. What is lazy loading in react? </h2>
+    <p>
+       <span> Ans.</span> React apps are bundled within pre installed bundlers like webpack before making the react application to be production ready. When this bundled project is loaded, it loads the whole source code at once even those pages which are really visited by the uses so to prevent the entire loading of the application at once we use a concept of Lazy loading to decrease the dom load time and increase the speed of the application.
+    </p>
+
+    <p>We can import lazy package from react and then we can make a variable and inside that we can call lazy function and inside that function and arrow function within which we can import the component which we want and then passing this variable to the route.</p>
+
+    <h2> 12. How do you switch one component to another, Conditional Rendering? </h2>
+    <p>
+       <span> Ans.</span> In react we have multiple component. A component decide in some condition if it's true then return one component else return other component. In this scenario we use conditional rendering. Conditional rendering are basically done with many ways like we can use if condition, ternary operator, logical and operator and switch case operator.
+    </p>
+
+    <h2> 13. What is Context api? </h2>
+    <p>
+       <span> Ans.</span> Context API is a building API introduced in react 16.3 version. It makes it possible to pass data from parent to child nested deep down the component tree directly instead of passing and down through the chain of props. Basically it solve the problem of prop drilling. Contact API help share data between component which you can't easily share with props
+    </p>
+
+    <h2> 14. What is Props Drilling Concept ?What is State Uplifting?  </h2>
+    <p>
+       <span> Ans.</span> Prop drilling is a situation where data is passed from one component through multiple interdependent component until you get the component where the data is needed.
+    </p>
+    <p>In react sharing state is  accomplished by moving it up to the closest common and ancestor of the component that need it this is called lifting state up.</p>
+
+    <p>In react every component has a own state but sometime we need to make state of parent as a single source to the child so we need to lift up the state if child</p>
+
+    <h2> 15. High Order Component in react js? </h2>
+    <p>
+       <span> Ans.</span> High order component is a advanced method of reusing the component functionality logic. It simply takes the original component and returns the enhanced component. High order component are easy to handle, we can get rid of copying the same logic in every component, make code more readable.
+    </p>
+
+    <h2> 16. Do you know about SEO ? Is it true that react js supports SEO support </h2>
+    <p>
+       <span> Ans.</span> SEO means Search Engine Optimisation, SEO is not design goal of React.
+
+       The key to make react more SEO friendly is to make sure Google does not required to use JavaScript to render that content of the page that can be achieved by using server side rendering.
+    </p>
+
+    <h2> 17. What is useEffect Hook ? </h2>
+    <p>
+       <span> Ans.</span> The useEffect Hook allows you to perform side effects in your components.
+
+       Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+       
+       useEffect accepts two arguments. The second argument is optional.
+       
+       useEffect(<function>, <dependency>)
+    </p>
+
+    <h2> 18. What is useState Hook ? </h2>
+    <p>
+       <span> Ans.</span> The React useState Hook allows us to track state in a function component. State generally refers to data or properties that need to be tracking in an application.
+    </p>
+
+    <h2> 19. What is useReducer Hook ? </h2>
+    <p>
+       <span> Ans.</span> The useReducer Hook is similar to the useState Hook. It allows for custom state logic.
+       If you find yourself keeping track of multiple pieces of state that rely on complex logic, useReducer may be useful.
+    </p>
+
+    <h2> 20. What is a Hook ? </h2>
+    <p>
+       <span> Ans.</span> Hooks were added to React in version 16.8.
+
+       Hooks allow function components to have access to state and other React features. Because of this, class components are generally no longer needed. Although Hooks generally replace class components, there are no plans to remove classes from React. Hooks allow us to "hook" into React features such as state and lifecycle methods.
+    </p>
+
+    <h2> 21. What is useMemo Hook ? </h2>
+    <p>
+       <span> Ans.</span> The React useMemo Hook returns a memoized value. Think of memoization as caching a value so that it does not need to be recalculated. The useMemo Hook only runs when one of its dependencies update. This can improve performance. The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useCallback in the useCallback chapter.
+    </p>
+    <p>The useMemo Hook can be used to keep expensive, resource intensive functions from needlessly running. In this    example, we have an expensive function that runs on every render. When changing the count or adding a todo, you will notice a delay in execution.</p>
+
+    <h2> 22. What is useRef Hook ? </h2>
+    <p>
+       <span> Ans.</span> The useRef Hook allows you to persist values between renders. It can be used to store a mutable value that does not cause a re-render when updated. It can be used to access a DOM element directly.
+    </p>
+
+    <p>If we tried to count how many times our application renders using the useState Hook, we would be caught in an infinite loop since this Hook itself causes a re-render. To avoid this, we can use the useRef Hook.</p>
+
+    <h2> 23. What is Memo? </h2>
+    <p>
+       <span> Ans.</span> Using memo will cause React to skip rendering a component if its props have not changed. This can improve performance.
+    </p>
+
+    <h2> 24.  </h2>
+    <p>
+       <span> Ans.</span> 
+    </p>
+    <h2> 25.  </h2>
+    <p>
+       <span> Ans.</span> 
+    </p>
+
+    <h2> 26.  </h2>
+    <p>
+       <span> Ans.</span> 
+    </p>
+
+    <h2> 27.  </h2>
+    <p>
+       <span> Ans.</span> 
+    </p>
+
+    <h2> 28.  </h2>
+    <p>
+       <span> Ans.</span> 
+    </p>
+
+    <h2> 29.  </h2>
+    <p>
+       <span> Ans.</span> 
+    </p>
+
+    <h2> 30.  </h2>
+    <p>
+       <span> Ans.</span> 
+    </p>
+
+    <h2> 31.  </h2>
+    <p>
+       <span> Ans.</span> 
+    </p>
+
+    <h2> 32.  </h2>
+    <p>
+       <span> Ans.</span> 
+    </p>
+    </div>
+   
+
+  </body>
+</html>
